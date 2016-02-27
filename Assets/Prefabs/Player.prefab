@@ -29,7 +29,8 @@ GameObject:
   - 114: {fileID: 11432970}
   - 114: {fileID: 11417562}
   - 114: {fileID: 11403252}
-  m_Layer: 0
+  - 114: {fileID: 11489406}
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -103,9 +104,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b87dfd84606569548a53558bcf666a0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _AtomPrefab: {fileID: 176820, guid: 197df26dd2f6e444fa2bb370516f0b2b, type: 2}
+  _AtomPrefab: {fileID: 11462012, guid: 197df26dd2f6e444fa2bb370516f0b2b, type: 2}
   _AtomsNum: 10
-  _AtomSpawnRange: 1
+  _AtomSpawnRange: 10
 --- !u!114 &11417562
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -130,6 +131,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _MovementForce: 1000
+  _DashForce: 20
+--- !u!114 &11489406
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0cf7ff2aade835418eb848444c67bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &21219760
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -166,7 +179,16 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: _AtomPrefab
+      value: 
+      objectReference: {fileID: 11462012, guid: 197df26dd2f6e444fa2bb370516f0b2b,
+        type: 2}
+    - target: {fileID: 0}
+      propertyPath: _AtomSpawnRange
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 167756}
